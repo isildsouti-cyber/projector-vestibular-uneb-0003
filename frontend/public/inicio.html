@@ -89,77 +89,173 @@
  <div class=blocoPadrao id=blocoInformacoesGerais>
  <h3><span>Informações Gerais</span></h3>
  <div class=dados>
-<div style="font-family:Arial,Helvetica,sans-serif;color:#403C3B;line-height:1.6">
-  <p style="margin:0 0 22px;font-size:15px;color:#555">Confira abaixo os principais comunicados e editais do <strong>Processo Seletivo Vestibular UNEB 2027</strong>. As informações são atualizadas conforme o cronograma oficial.</p>
+<div class="uneb-comunicados" style="font-family:'Segoe UI',Arial,Helvetica,sans-serif;color:#2b2b2b;line-height:1.6">
+  <style>
+    .uneb-comunicados *{box-sizing:border-box}
+    .uneb-comunicados .uneb-intro{margin:0 0 26px;font-size:15px;color:#596575}
+    .uneb-comunicados .uneb-periodo{
+      position:relative;display:flex;align-items:flex-start;gap:16px;
+      background:linear-gradient(135deg,#eef4ff 0%,#f7faff 100%);
+      border:1px solid #d6e3fb;border-left:5px solid #1351b4;border-radius:10px;
+      padding:20px 22px;margin-bottom:34px;
+    }
+    .uneb-comunicados .uneb-periodo .uneb-ico{
+      flex:0 0 44px;height:44px;border-radius:10px;background:#1351b4;
+      display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(19,81,180,.25);
+    }
+    .uneb-comunicados .uneb-periodo h4{margin:0 0 4px;font-size:16px;color:#0b3a85;font-weight:700;letter-spacing:.2px}
+    .uneb-comunicados .uneb-periodo p{margin:0;font-size:14px;color:#4a5667}
+    .uneb-comunicados .uneb-periodo .uneb-aberto{
+      display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+      font-size:12px;font-weight:600;color:#0a7d33;background:#e4f7ea;
+      border:1px solid #bfe9cc;border-radius:999px;padding:3px 11px;
+    }
+    .uneb-comunicados .uneb-aberto .uneb-dot{width:7px;height:7px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 3px rgba(22,163,74,.18)}
 
-  <div style="border:1px solid #e2e2e2;border-radius:6px;padding:18px 22px;margin-bottom:26px">
-    <h4 style="margin:0 0 8px;font-size:16px;color:#403C3B;font-weight:700">Período de Inscrição</h4>
-    <p style="margin:0;font-size:14px;color:#555">As inscrições para o Vestibular UNEB 2027 estarão abertas de <strong>15 de setembro</strong> a <strong>7 de outubro de 2026</strong>, exclusivamente pela internet.</p>
+    .uneb-comunicados .uneb-head{display:flex;align-items:center;gap:12px;margin:0 0 20px}
+    .uneb-comunicados .uneb-head h4{margin:0;font-size:19px;color:#1f2a37;font-weight:700;letter-spacing:.2px}
+    .uneb-comunicados .uneb-head .uneb-line{flex:1;height:1px;background:linear-gradient(90deg,#e4e9f0,transparent)}
+    .uneb-comunicados .uneb-head .uneb-count{
+      font-size:12px;font-weight:700;color:#1351b4;background:#eaf1fe;
+      border-radius:999px;padding:3px 12px;border:1px solid #d6e3fb;
+    }
+
+    .uneb-comunicados .uneb-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+    .uneb-comunicados .uneb-card{
+      display:flex;gap:18px;align-items:flex-start;
+      background:#fff;border:1px solid #e8ebf0;border-radius:12px;
+      padding:18px 20px;text-decoration:none;color:inherit;
+      transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+    }
+    .uneb-comunicados .uneb-card:hover{
+      transform:translateY(-3px);border-color:#bcd2f6;
+      box-shadow:0 12px 26px rgba(19,81,180,.12);
+    }
+    .uneb-comunicados .uneb-date{
+      flex:0 0 66px;text-align:center;color:#fff;border-radius:10px;
+      background:linear-gradient(160deg,#1a5fc9 0%,#0f448f 100%);
+      padding:10px 4px;box-shadow:0 5px 12px rgba(15,68,143,.28);
+    }
+    .uneb-comunicados .uneb-date .d{display:block;font-size:24px;font-weight:800;line-height:1;letter-spacing:.5px}
+    .uneb-comunicados .uneb-date .m{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:3px;opacity:.92}
+    .uneb-comunicados .uneb-body{flex:1;min-width:0}
+    .uneb-comunicados .uneb-tag{
+      display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+      color:#1351b4;background:#eef3fd;border:1px solid #dbe6fa;border-radius:6px;padding:2px 9px;margin-bottom:8px;
+    }
+    .uneb-comunicados .uneb-tag.doc{color:#0a7d33;background:#e9f8ee;border-color:#c7ecd3}
+    .uneb-comunicados .uneb-card .uneb-title{
+      display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+      font-size:15.5px;color:#15325f;font-weight:700;margin:0 0 5px;
+    }
+    .uneb-comunicados .uneb-card:hover .uneb-title{color:#1351b4}
+    .uneb-comunicados .uneb-chev{flex:0 0 auto;color:#9db4d8;transition:transform .18s ease,color .18s ease;margin-top:2px}
+    .uneb-comunicados .uneb-card:hover .uneb-chev{transform:translateX(4px);color:#1351b4}
+    .uneb-comunicados .uneb-desc{font-size:14px;color:#5b6778;margin:0}
+    .uneb-comunicados .uneb-sub{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+    .uneb-comunicados .uneb-sub li{
+      font-size:12.5px;color:#48566a;background:#f4f6fa;border:1px solid #e6eaf1;
+      border-radius:7px;padding:5px 11px;display:flex;align-items:center;gap:6px;
+    }
+    .uneb-comunicados .uneb-sub li::before{content:"";width:5px;height:5px;border-radius:50%;background:#1351b4;flex:0 0 auto}
+    @media(max-width:560px){
+      .uneb-comunicados .uneb-card{gap:14px;padding:16px}
+      .uneb-comunicados .uneb-date{flex-basis:56px}
+      .uneb-comunicados .uneb-date .d{font-size:20px}
+    }
+  </style>
+
+  <p class="uneb-intro">Confira abaixo os principais comunicados e editais do <strong style="color:#1f2a37">Processo Seletivo Vestibular UNEB 2027</strong>. As informações são atualizadas conforme o cronograma oficial.</p>
+
+  <div class="uneb-periodo">
+    <div class="uneb-ico" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </div>
+    <div>
+      <h4>Período de Inscrição</h4>
+      <p>As inscrições para o Vestibular UNEB 2027 estarão abertas de <strong style="color:#0b3a85">15 de setembro</strong> a <strong style="color:#0b3a85">7 de outubro de 2026</strong>, exclusivamente pela internet.</p>
+      <span class="uneb-aberto"><span class="uneb-dot"></span> Inscrições exclusivamente on-line</span>
+    </div>
   </div>
 
-  <h4 style="font-size:17px;color:#403C3B;border-bottom:2px solid #f0f0f0;padding-bottom:8px;margin:0 0 4px">Comunicados e Publicações</h4>
-  <ul style="list-style:none;margin:0;padding:0">
+  <div class="uneb-head">
+    <h4>Comunicados e Publicações</h4>
+    <span class="uneb-count">5 publicações</span>
+    <span class="uneb-line"></span>
+  </div>
 
-    <li style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #eee">
-      <div style="flex:0 0 72px;text-align:center;background:#1351b4;color:#fff;border-radius:6px;padding:8px 4px;height:fit-content">
-        <span style="display:block;font-size:22px;font-weight:700;line-height:1">02</span>
-        <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px">Out 2026</span>
-      </div>
-      <div>
-        <strong style="display:block;font-size:15px;color:#1351b4;margin-bottom:3px">Carta de Certificação da Comunidade Quilombola</strong>
-        <span style="font-size:14px;color:#555">Documento disponibilizado para fins ilustrativos e de orientação ao(à) candidato(a), auxiliando na identificação do que deve ser solicitado à comunidade a qual pertence.</span>
-      </div>
+  <ul class="uneb-list">
+
+    <li>
+      <a class="uneb-card" href="/termos">
+        <div class="uneb-date"><span class="d">02</span><span class="m">Out</span></div>
+        <div class="uneb-body">
+          <span class="uneb-tag doc">Documento</span>
+          <div class="uneb-title">Carta de Certificação da Comunidade Quilombola
+            <svg class="uneb-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <p class="uneb-desc">Documento disponibilizado para fins ilustrativos e de orientação ao(à) candidato(a), auxiliando na identificação do que deve ser solicitado à comunidade a qual pertence.</p>
+        </div>
+      </a>
     </li>
 
-    <li style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #eee">
-      <div style="flex:0 0 72px;text-align:center;background:#1351b4;color:#fff;border-radius:6px;padding:8px 4px;height:fit-content">
-        <span style="display:block;font-size:22px;font-weight:700;line-height:1">16</span>
-        <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px">Set 2026</span>
-      </div>
-      <div>
-        <strong style="display:block;font-size:15px;color:#1351b4;margin-bottom:3px">Validação Documental e de Heteroidentificação Fenotípica</strong>
-        <span style="font-size:14px;color:#555">Orientações aos candidatos e declarações destinadas à validação documental e ao procedimento de heteroidentificação para as vagas reservadas.</span>
-      </div>
+    <li>
+      <a class="uneb-card" href="/termos">
+        <div class="uneb-date"><span class="d">16</span><span class="m">Set</span></div>
+        <div class="uneb-body">
+          <span class="uneb-tag">Orientação</span>
+          <div class="uneb-title">Validação Documental e de Heteroidentificação Fenotípica
+            <svg class="uneb-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <p class="uneb-desc">Orientações aos candidatos e declarações destinadas à validação documental e ao procedimento de heteroidentificação para as vagas reservadas.</p>
+        </div>
+      </a>
     </li>
 
-    <li style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #eee">
-      <div style="flex:0 0 72px;text-align:center;background:#1351b4;color:#fff;border-radius:6px;padding:8px 4px;height:fit-content">
-        <span style="display:block;font-size:22px;font-weight:700;line-height:1">15</span>
-        <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px">Set 2026</span>
-      </div>
-      <div>
-        <strong style="display:block;font-size:15px;color:#1351b4;margin-bottom:3px">Inscrição e Isenção &ndash; Vestibular UNEB 2027</strong>
-        <span style="font-size:14px;color:#555">Orientações para realizar a inscrição e solicitar a isenção da taxa:</span>
-        <ul style="margin:8px 0 0;padding-left:20px;font-size:14px;color:#555">
-          <li>Orientações para inscrição</li>
-          <li>Orientações para solicitar isenção</li>
-          <li>Orientações para a modalidade de concorrência &ldquo;Negro&rdquo;</li>
-          <li>Orientações para a modalidade de concorrência &ldquo;Sobrevagas&rdquo;</li>
-          <li>Orientações para solicitação de inclusão e uso de nome social</li>
-        </ul>
-      </div>
+    <li>
+      <a class="uneb-card" href="/termos">
+        <div class="uneb-date"><span class="d">15</span><span class="m">Set</span></div>
+        <div class="uneb-body">
+          <span class="uneb-tag">Orientação</span>
+          <div class="uneb-title">Inscrição e Isenção &ndash; Vestibular UNEB 2027
+            <svg class="uneb-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <p class="uneb-desc">Orientações para realizar a inscrição e solicitar a isenção da taxa:</p>
+          <ul class="uneb-sub">
+            <li>Orientações para inscrição</li>
+            <li>Solicitar isenção</li>
+            <li>Modalidade &ldquo;Negro&rdquo;</li>
+            <li>Modalidade &ldquo;Sobrevagas&rdquo;</li>
+            <li>Inclusão e uso de nome social</li>
+          </ul>
+        </div>
+      </a>
     </li>
 
-    <li style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #eee">
-      <div style="flex:0 0 72px;text-align:center;background:#1351b4;color:#fff;border-radius:6px;padding:8px 4px;height:fit-content">
-        <span style="display:block;font-size:22px;font-weight:700;line-height:1">05</span>
-        <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px">Set 2026</span>
-      </div>
-      <div>
-        <strong style="display:block;font-size:15px;color:#1351b4;margin-bottom:3px">Edital de Isenção da Taxa de Inscrição</strong>
-        <span style="font-size:14px;color:#555">Edital de isenção do pagamento da taxa de inscrição no Processo Seletivo Vestibular 2027, com critérios e prazos para solicitação.</span>
-      </div>
+    <li>
+      <a class="uneb-card" href="/termos">
+        <div class="uneb-date"><span class="d">05</span><span class="m">Set</span></div>
+        <div class="uneb-body">
+          <span class="uneb-tag">Edital</span>
+          <div class="uneb-title">Edital de Isenção da Taxa de Inscrição
+            <svg class="uneb-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <p class="uneb-desc">Edital de isenção do pagamento da taxa de inscrição no Processo Seletivo Vestibular 2027, com critérios e prazos para solicitação.</p>
+        </div>
+      </a>
     </li>
 
-    <li style="display:flex;gap:16px;padding:16px 0">
-      <div style="flex:0 0 72px;text-align:center;background:#1351b4;color:#fff;border-radius:6px;padding:8px 4px;height:fit-content">
-        <span style="display:block;font-size:22px;font-weight:700;line-height:1">05</span>
-        <span style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px">Set 2026</span>
-      </div>
-      <div>
-        <strong style="display:block;font-size:15px;color:#1351b4;margin-bottom:3px">Edital de Abertura das Inscrições</strong>
-        <span style="font-size:14px;color:#555">Edital de abertura (republicado) das inscrições para o Processo Seletivo Vestibular 2027, contendo cronograma, vagas, cursos e normas gerais.</span>
-      </div>
+    <li>
+      <a class="uneb-card" href="/termos">
+        <div class="uneb-date"><span class="d">05</span><span class="m">Set</span></div>
+        <div class="uneb-body">
+          <span class="uneb-tag">Edital</span>
+          <div class="uneb-title">Edital de Abertura das Inscrições
+            <svg class="uneb-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <p class="uneb-desc">Edital de abertura (republicado) das inscrições para o Processo Seletivo Vestibular 2027, contendo cronograma, vagas, cursos e normas gerais.</p>
+        </div>
+      </a>
     </li>
 
   </ul>
