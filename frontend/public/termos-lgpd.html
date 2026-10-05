@@ -117,6 +117,27 @@
  </div>
  
  </div>
+  <style id="__pl_style">
+#__page_loader{position:fixed;inset:0;background:rgba(255,255,255,.92);z-index:2147483646;display:none;align-items:center;justify-content:center;opacity:1}
+#__page_loader.__show{display:flex}
+#__page_loader .__spinner{width:52px;height:52px;border:4px solid #e4e9ef;border-top-color:#1858BF;border-radius:50%;animation:__pl_spin .8s linear infinite}
+@keyframes __pl_spin{to{transform:rotate(360deg)}}
+  </style>
+  <div id="__page_loader" aria-hidden="true"><div class="__spinner"></div></div>
+  <script>
+(function(){
+  var link=document.getElementById('btContinuarFormularioMultiplo');
+  if(!link) return;
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    var href=link.getAttribute('href')||'/confirmacao.html';
+    var loader=document.getElementById('__page_loader');
+    if(loader) loader.classList.add('__show');
+    setTimeout(function(){ window.location.href=href; },2000);
+  });
+})();
+  </script>
+
  
  
  
