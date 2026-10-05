@@ -1843,14 +1843,30 @@
     // ----- Botão Continuar -----
     var cont=document.getElementById('bt-continuar');
     if(cont){
+      var mod=document.getElementById('c-id_vagaespecial');
+      var prova=document.getElementById('c-id_cidadeprova');
+      function continuarHabilitado(){
+        return !!(cargo && cargo.value) && !!(mod && mod.selectedIndex>=0) && !!(prova && prova.value);
+      }
+      function atualizarContinuar(){
+        var ok=continuarHabilitado();
+        cont.style.opacity = ok ? '1' : '0.6';
+        cont.style.cursor = ok ? 'pointer' : 'not-allowed';
+        cont.style.pointerEvents = ok ? 'auto' : 'none';
+        cont.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      }
+      if(cargo) cargo.addEventListener('change', atualizarContinuar);
+      if(mod) mod.addEventListener('change', atualizarContinuar);
+      if(prova) prova.addEventListener('change', atualizarContinuar);
+      atualizarContinuar();
       cont.addEventListener('click', function(e){
         e.preventDefault();
-        if(cargo && !cargo.value){ alert('Selecione a 1\u00AA op\u00E7\u00E3o de curso para continuar.'); return; }
+        if(!continuarHabilitado()){ return; }
         try{
           var prev=JSON.parse(sessionStorage.getItem('inscricao_dados')||'{}');
           if(cargo){ prev.CURSO = cargo.options[cargo.selectedIndex].textContent.trim().replace(/\s+/g,' '); prev.CURSO_ID=cargo.value; }
-          var mod=document.getElementById('c-id_vagaespecial'); if(mod) prev.MODALIDADE=mod.options[mod.selectedIndex].textContent.trim();
-          var prova=document.getElementById('c-id_cidadeprova'); if(prova) prev.LOCAL_PROVA=prova.options[prova.selectedIndex].textContent.trim();
+          if(mod) prev.MODALIDADE=mod.options[mod.selectedIndex].textContent.trim();
+          if(prova) prev.LOCAL_PROVA=prova.options[prova.selectedIndex].textContent.trim();
           sessionStorage.setItem('inscricao_dados', JSON.stringify(prev));
         }catch(err){}
         window.location.href='/pagamento-pix.html';
